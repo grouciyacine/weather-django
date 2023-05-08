@@ -1,0 +1,21 @@
+<html>
+    <form action="" method="post">
+        {% csrf_token %}
+            <div style='display:flex;flex-direction:columne;justify-content:center;align-items:center;border:1px solid black; width:200px;height:3vh;border-redius:3px'>
+        <input name="city" style='border:none;padding-reight:10px' type='text' placeholder='Search...' />
+        <img  style='width:10px;height:10px' src='https://uxwing.com/wp-content/themes/uxwing/download/user-interface/search-icon.png'/>
+    </div>
+    <div>
+        {% if data.country_code %}
+        <h1>{{city}}</h1>
+        <h1>Contry Code: {{data.country_code}}</h1>
+        <h3>Coordinate: {{data.coordinate}}</h3>
+        <h3>temp: {{data.temp}}</h3>
+        <h3>pressure:{{data.pressure}} </h3>
+        <h3>homidity: {{data.humidity}}</h3>
+        {% endif %}
+
+    </div>
+    </form>
+
+</html>
